@@ -19,6 +19,7 @@ body{
 
     
 }
+
 .main .top{
     height: 45%;
     background: rgb(255, 120, 9);
@@ -225,17 +226,27 @@ i.fa-comment-o{
 
 .botnav{
     position: fixed;
-    transform: scale(0.6);
+    transform: scale(0.5);
     border-radius: 50%;
-    bottom: 50px;
-    right: 50px;
+    bottom: 3%;
+    right: 3%;
     padding: 20px;
     outline: none;
     border: none;
     box-shadow: 0px 0px 52px 2px rgb(248, 230, 230);
     cursor: pointer;
 }
-
+@media screen and (max-width:700px){
+    .main{
+        width: 300px;
+    }
+    .main .bottom .box{
+        padding: 20px;
+    }
+    .bot img{
+        margin-top: 1px;
+    }
+}
 
   </style>
 </head>
