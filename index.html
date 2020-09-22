@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+body{
+    background: #000;
+}
+.main{
+    display: none;
+    height: 98vh;
+    width: 430px;
+    margin: 2px auto;
+    
+    border-radius: 20px;
+
+    
+}
+.main .top{
+    height: 45%;
+    background: rgb(255, 120, 9);
+    border-radius: 20px 20px 0 0;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    color: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    
+}
+.top h2,.top p,.top .bot,.top .sec+span img{
+
+  opacity: 0;
+  animation-name: appear;
+  animation-timing-function:cubic-bezier();
+  animation-delay: 2s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+    
+}
+
+@keyframes appear{
+    from{left:-300px;opacity:0} 
+    to{left:0;opacity:1}
+    
+}
+.bottom .box .secHead{
+    opacity: 0;
+    animation-name: appear;
+  animation-timing-function:cubic-bezier();
+  animation-delay: 4s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+
+.bottom .box ul li:nth-child(1){
+    opacity: 0;
+    animation-name: appear;
+  animation-timing-function:cubic-bezier();
+  animation-delay: 6s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+.bottom .box ul li:nth-child(2){
+    opacity: 0;
+    animation-name: appear;
+  animation-timing-function:cubic-bezier();
+  animation-delay: 8s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+.bottom .box ul li:nth-child(3){
+    opacity: 0;
+    animation-name: appear;
+  animation-timing-function:cubic-bezier();
+  animation-delay: 10s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+.bottom .box ul li:nth-child(4){
+    opacity: 0;
+    animation-name: appear;
+  animation-timing-function:cubic-bezier();
+  animation-delay: 12s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+.bottom .box .start{
+    opacity: 0;
+    animation-name: appear;
+  animation-timing-function:cubic-bezier();
+  animation-delay: 14s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+.main .bottom{
+    height: 55%;
+    background: #ffffff;
+    border-radius: 0 0 20px 20px;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    
+}
+.main .bottom .box{
+    border: 1px solid rgb(235, 220, 220);
+    width:80% ;
+    background: #ffffff;
+    margin:-80px auto;
+    z-index: 63;
+    height: 96%;
+    padding: 40px;
+    border-radius: 10px;
+    
+}
+.sec{ font-weight: 600;
+    display: inline-block;
+    
+
+}
+.sec+span{
+    font-size: 20px;
+    margin-left: 20px;}
+
+
+ .sec+span img{
+     height: 20px;
+ }   
+.third{
+    margin-bottom: 20px;
+}
+.secHead{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 1px;
+}
+ul.QnA li::before{
+    content: '\2022';
+    color: rgb(255, 140, 46);
+    margin-right: 6px;
+    transform: scale(2);
+    font-weight: 900;
+    text-shadow: 0 0 5px rgb(255, 140, 46);;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+
+ul.QnA{
+    list-style-position: inside;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.Qa{padding: 17px 30px;
+   
+    border: 1px solid rgb(235, 220, 220);
+    border-radius: 10px;
+    margin-bottom: 2%;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 100;
+    font-size: 12px;
+}
+.start{
+    box-shadow: 1px 1px 1px 0.5px #ccc;
+    background: #ffffff;
+    padding: 10px 40px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid rgb(235, 220, 220);
+
+}
+i.fa-question{
+    color:rgb(255, 120, 9);
+    display: inline-block;
+    padding: 4px;
+    border-radius: 50%;
+    background:rgb(240, 236, 234);
+    
+    
+    font-size: 20px;
+    margin-left: 10px;
+}
+i.fa-comment-o{
+    margin-right: 6px;
+}
+
+.bot img{
+    
+    padding: 10px;
+    background: rgb(250, 132, 21);
+    border-radius: 50%;
+    margin: 5px;
+    color: #ffffff;
+    position: absolute;
+    margin-top:27px;
+    box-shadow:0 0 2px 2px rgb(243 92 3 / 8);
+    height: 50px;
+    width: 50px;
+    
+    
+
+}
+.top h2{margin: 0;padding: 0px;}
+.top p.sec{margin: 16px 0;padding: 0;}
+.top p.third{margin: 0;padding: 0;}
+
+
+.botnav{
+    position: fixed;
+    transform: scale(0.6);
+    border-radius: 50%;
+    bottom: 50px;
+    right: 50px;
+    padding: 20px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 52px 2px rgb(248, 230, 230);
+    cursor: pointer;
+}
+
+
+  </style>
+</head>
+
+<body>
+ <div class="main">
+<div class='top'>
+ <h2>IRIS</h2>
+ <p class="sec">Hello</p><span><img src="./palmwawe.svg"></span>
+ <p class="third">I am Iris, a Virtual Assistant<br>
+How may I help you?
+</p>
+<div class="bot">
+    <img  src="./bot (2).png">
+</div>
+</div>
+
+<div class="bottom">
+   
+<div class="box">
+    <p class="secHead">Frequently Asked Questions <i class="fa fa-question"></i></p>
+    <ul class="QnA">
+    <li class="Qa">Can I redeem my FB before the origin term?</li>
+    <li class="Qa">How do I pay my Credit card bill?</li>
+    <li class="Qa">How can I get my Account Statement?</li>
+    <li class="Qa">What is the tenure of Fixed Deposit?</li>
+    </ul>
+    
+
+    <button class="start"><i class='fa fa-comment-o'></i>Start a New Conversation</button>
+</div>
+</div>
+ </div>
+
+ <button class="botnav">
+     <img src="./bot (1).png">
+ </button>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.botnav').click(function(){
+        $('.main').fadeIn('slow')
+        $(this).addClass('hide')
+    })
+})
+</script>
+</body>
+
+</html>
